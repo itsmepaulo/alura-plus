@@ -1,0 +1,325 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
+:root{
+    --branco-principal:#ffffff;
+    --cinza-segundario:#C0C0C0;
+    --botao-azul:#167BF7;
+    --cor-de-fundo:#00030C ;
+    --fonte-principal:"Inter", sans serif;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    height: 100vh;
+    width: 98.7vw;
+}
+
+section.principal{
+    background-image: url(../imagens/Background.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;  /* Ele divide a section em duas colunas da página*/
+}
+
+.container__caixa{
+    margin: 0 6em;
+}
+
+.titulo{
+    font-family: var(--fonte-principal);
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.61rem;
+    
+}
+.container__imagem{
+    margin: 1em 0 2em 0;
+    
+}
+
+.container__botao{
+    background-color: var(--botao-azul);
+    padding: 1em;
+    color: var(--branco-principal);
+    border-radius: 8px;
+    text-decoration: none;
+    display: block;
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    margin-bottom: 1em;
+    text-align: center;
+    border: 1px solid var(--botao-azul);
+}
+
+.container__botao:hover, .botao_terciario:hover{
+    background-color: var(--branco-principal);
+    color: var(--botao-azul);
+    transition: 0.35s;
+}
+
+.botao_secundario{
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+
+}
+
+.container__aviso{
+    text-align: center;
+    color: var(--cinza-segundario);
+    font-size: 0.75rem;
+    font-family: var(--fonte-principal);
+    
+}
+
+.secundario{
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%; 
+}
+
+.secundario__imagem{
+    margin: auto;
+    width: 80%;
+
+}
+
+.container__descricao{
+    align-items: center;
+    margin: auto;
+    width: 588px;
+}
+
+.descricao__titulo{
+    font-family: var(--fonte-principal);
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.descricao__texto{
+    color: var(--cinza-segundario);
+    font-size: 0.8rem;
+    font-family: var(--fonte-principal);
+    
+}
+
+.terciario{
+    align-items: center;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%; 
+}
+
+.botao_terciario{
+    background-color: var(--botao-azul);
+    padding: 1em;
+    color: var(--branco-principal);
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: var(--fonte-principal);
+    display: inline-block;
+    margin-top: 20px;
+}
+
+
+.terciario__imagem{
+    width: 80%;
+
+}
+
+.quaternario{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%; 
+    align-items: center;
+
+}
+
+.quaternario__imagem{
+    width: 80%;
+    margin: auto;
+}
+
+.dispositivos{
+    text-align: center;
+
+}
+
+.dispositivos__titulo{
+    font-family: var(--fonte-principal);
+    font-size: 3rem;
+}
+
+.dispositivos__lista{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 20px;
+    margin: 3em 0em;
+}
+
+.lista__titulo{
+    font-family: var(--fonte-principal);
+    font-size: 2rem;
+}
+
+.dispotivos__imagem{
+
+    width: 33%;
+
+}
+
+.rodape{
+    padding: 4% 6%;
+
+}
+
+.rodape__logo{
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.rodape__inf{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+}
+
+.rodape__link{
+    color: var(--branco-principal);
+    text-decoration: none;
+    font-family: var(--fonte-principal);
+    font-size: 1rem;
+}
+
+.rodape__link:hover{
+    color: var(--botao-azul);
+    transition: 0.30s;
+}
+
+.rodape__alura{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: var(--fonte-principal);
+    color: var(--cinza-segundario);
+    gap: 20px;
+}
+@media (max-width:1200px){
+   
+    section.principal{
+        background-image: none;
+        background-repeat: no-repeat;
+        background-size: contain;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+    }
+    
+    .container__caixa{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .container__botao{
+        width: 70%;
+        margin: auto;
+    }
+
+    .container__imagem{
+        margin: auto;
+        
+    }
+
+    .secundario{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .secundario__imagem{
+        margin: auto;
+        width: 80%;
+    
+    }
+    
+    .container__descricao{
+        align-items: center;
+        margin: auto;
+        width: 80%;
+        text-align: center;
+        
+    }
+
+    .terciario{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .botao_terciario{
+        background-color: var(--botao-azul);
+        padding: 1em;
+        color: var(--branco-principal);
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 1rem;
+        font-family: var(--fonte-principal);
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        width: 50%;
+        text-align: center;
+    }
+
+    .quaternario{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .rodape__inf{
+        text-align: center;
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        gap: 2%;
+    }
+    
+    .rodape__link{
+        color: var(--branco-principal);
+        text-decoration: none;
+        font-family: var(--fonte-principal);
+        margin-left: 9px;
+    }
+   
+}
